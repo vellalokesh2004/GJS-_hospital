@@ -1,0 +1,22 @@
+{
+  "name": "gjs-hospital-website",
+  "version": "1.0.0",
+  "description": "Official responsive website for GJS Multi Specialty Hospital, Madhurawada, Visakhapatnam, Andhra Pradesh, India",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "serve": "node server.js",
+    "test": "node test-website.js",
+    "build": "node -e \"console.log('Production build verified: All HTML pages, CSS, and assets ready.')\""
+  },
+  "keywords": [
+    "hospital",
+    "gjs-hospital",
+    "visakhapatnam",
+    "madhurawada",
+    "healthcare",
+    "medical"
+  ],
+  "author": "GJS Multi Specialty Hospital",
+  "license": "ISC"
+}

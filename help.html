@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Help & FAQs | GJS Multi Specialty Hospital | Madhurawada, Visakhapatnam</title>
+  <meta name="description"
+    content="Patient help, FAQs, admission guidance, emergency contact procedures, and essential hospital information for GJS Multi Specialty Hospital, Madhurawada, Visakhapatnam." />
+  <meta name="keywords" content="Hospital FAQs Vizag, Patient Help GJS Hospital, Emergency contact Madhurawada, Inpatient admission Visakhapatnam" />
+  <meta name="author" content="GJS Multi Specialty Hospital" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Patient Help & FAQs | GJS Multi Specialty Hospital" />
+  <meta property="og:description" content="Find answers to frequently asked questions about admissions, facilities, and emergency care." />
+  <meta property="og:image" content="assets/images/hospital/hospital-building.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/hospital-logo.svg" type="image/svg+xml" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/aos.css" />
+  <script src="assets/aos.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/output.css" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body class="font-body bg-slate-50 text-slate-900">
+
+  <!-- ===================== PRELOADER ===================== -->
+  <div id="preloader">
+    <div class="flex flex-col items-center gap-5 text-center px-4">
+      <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center shadow-xl shadow-blue-500/20">
+        <i data-lucide="cross" class="w-8 h-8 text-white"></i>
+      </div>
+      <div class="text-white font-heading text-xl font-bold tracking-wide">GJS Multi Specialty Hospital</div>
+      <div class="text-slate-400 text-xs tracking-wider uppercase">Patient Help & Information</div>
+    </div>
+  </div>
+
+  <!-- ===================== TOPBAR ===================== -->
+  <div class="topbar py-2 text-white text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-2 text-center md:text-left">
+        <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 sm:gap-6">
+          <span class="inline-flex items-center gap-2">
+            <span class="w-2.5 h-2.5 bg-red-500 rounded-full animate-ping"></span>
+            <strong class="text-red-400 font-semibold">24/7 Emergency:</strong>
+            <a href="tel:7981225781" class="font-bold hover:text-red-300 transition-colors">7981225781</a>
+          </span>
+          <span class="hidden sm:inline-flex items-center gap-2 text-slate-300">
+            <i data-lucide="mail" class="w-3.5 h-3.5 text-blue-400"></i>
+            <a href="mailto:gjshospitalvizag@gmail.com" class="hover:text-white transition-colors">gjshospitalvizag@gmail.com</a>
+          </span>
+        </div>
+        <div class="flex items-center gap-4 text-slate-300 text-xs">
+          <span class="inline-flex items-center gap-1.5">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-blue-400"></i>
+            MIG-223, Mithilapuri VUDA Colony, Madhurawada, Visakhapatnam - 530041
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav id="navbar" class="sticky top-0 z-50 bg-white/95 backdrop-blur-md transition-all duration-300 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3 group text-decoration-none">
+          <div class="w-11 h-11 bg-blue-700 rounded-xl flex items-center justify-center text-white shadow-md shadow-blue-700/20 group-hover:bg-blue-800 transition-colors">
+            <i data-lucide="activity" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <div class="font-heading font-extrabold text-slate-900 text-lg sm:text-xl leading-tight">GJS Multi Specialty Hospital</div>
+            <div class="text-xs text-blue-700 font-medium tracking-wide">Madhurawada, Visakhapatnam</div>
+          </div>
+        </a>
+
+        <div class="hidden lg:flex items-center gap-7">
+          <a href="index.html" class="nav-link text-sm font-medium">Home</a>
+          <a href="about.html" class="nav-link text-sm font-medium">About</a>
+          <a href="facilities.html" class="nav-link text-sm font-medium">Facilities</a>
+          <a href="specialities.html" class="nav-link text-sm font-medium">Specialities</a>
+          <a href="gallery.html" class="nav-link text-sm font-medium">Gallery</a>
+          <a href="help.html" class="nav-link active text-sm font-semibold">Help</a>
+          <a href="contact.html" class="nav-link text-sm font-medium">Contact Us</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="tel:7981225781" class="hidden sm:inline-flex btn-primary text-sm py-2.5 px-5">
+            <i data-lucide="phone-call" class="w-4 h-4"></i>
+            <span>Call Hospital</span>
+          </a>
+          <button id="mobile-menu-btn" class="lg:hidden p-2.5 rounded-lg text-slate-700 hover:text-blue-700 hover:bg-slate-100 transition-colors" aria-label="Toggle navigation menu" aria-expanded="false">
+            <i data-lucide="menu" class="w-6 h-6" id="menu-open"></i>
+            <i data-lucide="x" class="w-6 h-6 hidden" id="menu-close"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-2 shadow-xl">
+      <a href="index.html" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">Home</a>
+      <a href="about.html" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">About</a>
+      <a href="facilities.html" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">Facilities</a>
+      <a href="specialities.html" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">Specialities</a>
+      <a href="gallery.html" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">Gallery</a>
+      <a href="help.html" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-blue-700 bg-blue-50">Help</a>
+      <a href="contact.html" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">Contact Us</a>
+      <div class="pt-2">
+        <a href="tel:7981225781" class="flex items-center justify-center gap-2 w-full btn-emergency py-3">
+          <i data-lucide="phone-call" class="w-5 h-5"></i>
+          <span>Emergency Call: 7981225781</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== BREADCRUMB ===================== -->
+  <div class="breadcrumb-wrap">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <ol class="breadcrumb-list">
+        <li><a href="index.html">Home</a></li>
+        <li><i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></li>
+        <li class="current">Patient Help & FAQs</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ===================== HERO HEADER ===================== -->
+  <header class="bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 text-white py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl space-y-4" data-aos="fade-up">
+        <div class="hero-badge">
+          <i data-lucide="help-circle" class="w-4 h-4"></i>
+          <span>Patient Guidance</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
+          Patient Help & Information
+        </h1>
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+          Find practical answers about hospital admissions, emergency response, diagnostic investigations, pharmacy availability, and how to contact GJS Multi Specialty Hospital.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== MEDICAL DISCLAIMER BANNER ===================== -->
+  <div class="bg-amber-50 border-b border-amber-200 py-3.5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-start gap-3 text-xs sm:text-sm text-amber-900">
+      <i data-lucide="alert-triangle" class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5"></i>
+      <div>
+        <strong>Important Medical Notice:</strong> The information provided on this page is for general patient guidance and orientation. It is not a substitute for professional medical diagnosis or immediate emergency care. If you are experiencing a life-threatening medical emergency, call <strong>7981225781</strong> immediately or visit our 24/7 Emergency Department in Madhurawada.
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== MAIN HELP CONTENT ===================== -->
+  <main class="section-padding bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        
+        <!-- Left: FAQ Accordion -->
+        <div class="lg:col-span-8 space-y-8">
+          <div>
+            <div class="section-tag mb-2">Common Inquiries</div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Frequently Asked Questions</h2>
+            <p class="text-sm text-slate-600 mt-2">Verified answers regarding hospital procedures, departments, inpatient facilities, and contact methods.</p>
+          </div>
+
+          <div class="space-y-3" id="faq-list">
+
+            <!-- FAQ 1: Emergency & Ambulance -->
+            <div class="faq-item">
+              <button class="faq-question w-full text-left" aria-expanded="false">
+                <span>How can I access emergency care and ambulance services?</span>
+                <i data-lucide="plus" class="faq-icon w-5 h-5"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  GJS Multi Specialty Hospital operates a <strong>24/7 emergency department</strong> and a <strong>24-hour ambulance service</strong>. In any acute medical emergency or trauma situation, please call our direct hotline at <a href="tel:7981225781" class="text-blue-600 font-bold underline">7981225781</a>. Our emergency bay is equipped for immediate triage, resuscitation, and seamless transfer into our Intensive Care Unit (ICU) or advanced operation theatre if needed.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 2: Location & Directions -->
+            <div class="faq-item">
+              <button class="faq-question w-full text-left" aria-expanded="false">
+                <span>Where is GJS Multi Specialty Hospital located in Visakhapatnam?</span>
+                <i data-lucide="plus" class="faq-icon w-5 h-5"></i>
+              </button>
+              <div class="faq-answer">
+                <p class="mb-2">
+                  Our exact address is: <br />
+                  <strong>MIG-223, Opposite ICICI Bank, Mithilapuri VUDA Colony, Madhurawada, Visakhapatnam, Andhra Pradesh 530041, India.</strong>
+                </p>
+                <p>
+                  The hospital is conveniently situated in Madhurawada, opposite ICICI Bank in Mithilapuri VUDA Colony, easily accessible by public and private transport. You can also view <a href="https://www.google.com/maps/search/?api=1&query=GJS+Multi+Specialty+Hospital+MIG-223+Mithilapuri+VUDA+Colony+Madhurawada+Visakhapatnam+530041" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline font-semibold">Google Maps Directions</a>.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 3: Inpatient Capacity & Room Types -->
+            <div class="faq-item">
+              <button class="faq-question w-full text-left" aria-expanded="false">
+                <span>What inpatient accommodations and room categories are available?</span>
+                <i data-lucide="plus" class="faq-icon w-5 h-5"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  GJS Hospital provides a total capacity of <strong>50 inpatient beds</strong> structured across multiple categories to accommodate diverse patient needs:
+                </p>
+                <ul class="list-disc pl-5 mt-2 space-y-1 text-xs sm:text-sm">
+                  <li><strong>Suite Rooms:</strong> Premium private patient suite with dedicated attendant seating and en-suite amenities.</li>
+                  <li><strong>Single Rooms:</strong> Individual private rooms for focused recovery and quiet patient care.</li>
+                  <li><strong>General Wards:</strong> Clean, well-ventilated shared ward beds with privacy partitions and nurse oversight.</li>
+                  <li><strong>Sharing Wards:</strong> Semi-private twin sharing rooms.</li>
+                  <li><strong>Intensive Care Unit (ICU):</strong> Continuous vital parameter monitoring and critical life support.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- FAQ 4: How to Enquire for Appointments -->
+            <div class="faq-item">
+              <button class="faq-question w-full text-left" aria-expanded="false">
+                <span>How can I submit an appointment or admission enquiry?</span>
+                <i data-lucide="plus" class="faq-icon w-5 h-5"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  You can enquire for an outpatient consultation or planned admission through multiple direct channels:
+                </p>
+                <ul class="list-disc pl-5 mt-2 space-y-1 text-xs sm:text-sm">
+                  <li><strong>Direct Telephone:</strong> Call <a href="tel:7981225781" class="text-blue-600 font-bold underline">7981225781</a> for instantaneous confirmation.</li>
+                  <li><strong>Email:</strong> Write to <a href="mailto:gjshospitalvizag@gmail.com" class="text-blue-600 font-semibold underline">gjshospitalvizag@gmail.com</a>.</li>
+                  <li><strong>Online Form:</strong> Fill out the client enquiry form on our <a href="contact.html" class="text-blue-600 underline">Contact Us page</a> or Homepage.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- FAQ 5: What Medical Specialities are Available? -->
+            <div class="faq-item">
+              <button class="faq-question w-full text-left" aria-expanded="false">
+                <span>Which medical specialities are available at GJS Multi Specialty Hospital?</span>
+                <i data-lucide="plus" class="faq-icon w-5 h-5"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  We offer clinical services across <strong>15 verified medical specialities</strong>:
+                </p>
+                <p class="mt-2 text-xs sm:text-sm leading-relaxed">
+                  General Medicine, General and Laparoscopic Surgery, Gynaecology and Obstetrics, Pediatrics, Orthopaedics, Pulmonology, ENT (Ear, Nose, Throat), Ophthalmology, Nephrology, Cardiology, Neurology, Urology, Gastroenterology, Geriatrics, and Endocrinology and Diabetes.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 6: Diagnostics, ECG, Ultrasound & Pharmacy -->
+            <div class="faq-item">
+              <button class="faq-question w-full text-left" aria-expanded="false">
+                <span>Are diagnostic tests, ultrasound, and pharmacy open 24/7?</span>
+                <i data-lucide="plus" class="faq-icon w-5 h-5"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, our <strong>in-house pharmacy</strong> operates <strong>24/7</strong> for emergency drugs and prescriptions. In-house diagnostic services including <strong>Laboratory pathology</strong>, <strong>12-lead ECG</strong>, and <strong>diagnostic ultrasound</strong> are available to support immediate clinical evaluations and inpatient medical care.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 7: Vaccination Services -->
+            <div class="faq-item">
+              <button class="faq-question w-full text-left" aria-expanded="false">
+                <span>Does the hospital offer child and adult vaccination?</span>
+                <i data-lucide="plus" class="faq-icon w-5 h-5"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, GJS Hospital provides <strong>child and adult vaccination services</strong> adhering to standardized clinical immunization schedules. Contact our desk at 7981225781 to enquire about vaccine availability and timing.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Guidance & Fast Contact Card -->
+        <div class="lg:col-span-4 space-y-6">
+          
+          <!-- Emergency Call Box -->
+          <div class="bg-red-50 border border-red-200 rounded-2xl p-6 text-slate-900 shadow-sm">
+            <div class="flex items-center gap-3 mb-3 text-red-600">
+              <div class="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center">
+                <i data-lucide="alert-octagon" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-red-500">Immediate Response</span>
+                <h3 class="text-lg font-extrabold text-red-900">Emergency & Ambulance</h3>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-4">
+              For trauma, cardiac emergencies, critical symptoms, or ambulance dispatch, call immediately.
+            </p>
+            <a href="tel:7981225781" class="w-full btn-emergency justify-center py-3">
+              <i data-lucide="phone-call" class="w-5 h-5"></i>
+              <span>Call 7981225781</span>
+            </a>
+          </div>
+
+          <!-- Contact Details Summary -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-6 space-y-4 shadow-sm">
+            <h3 class="text-base font-bold text-slate-900 border-b border-slate-100 pb-2">Hospital Help Desk</h3>
+            
+            <div class="space-y-3 text-sm">
+              <div class="flex items-start gap-3">
+                <i data-lucide="phone" class="w-4 h-4 text-blue-600 flex-shrink-0 mt-1"></i>
+                <div>
+                  <span class="text-xs text-slate-500 block">General Telephone</span>
+                  <a href="tel:7981225781" class="font-bold text-slate-900 hover:text-blue-700">7981225781</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <i data-lucide="mail" class="w-4 h-4 text-blue-600 flex-shrink-0 mt-1"></i>
+                <div>
+                  <span class="text-xs text-slate-500 block">General Email</span>
+                  <a href="mailto:gjshospitalvizag@gmail.com" class="font-semibold text-slate-900 hover:text-blue-700 text-xs sm:text-sm break-all">gjshospitalvizag@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <i data-lucide="map-pin" class="w-4 h-4 text-blue-600 flex-shrink-0 mt-1"></i>
+                <div>
+                  <span class="text-xs text-slate-500 block">Address</span>
+                  <p class="text-xs text-slate-800 leading-relaxed font-medium">
+                    MIG-223, Opp. ICICI Bank, Mithilapuri VUDA Colony, Madhurawada, Visakhapatnam, AP 530041
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2 border-t border-slate-100">
+              <a href="contact.html" class="w-full btn-outline-dark justify-center py-2.5 text-xs">
+                <span>View Contact Page & Map</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Navigation Links -->
+          <div class="bg-blue-50 border border-blue-100 rounded-2xl p-6">
+            <h4 class="text-sm font-bold text-blue-900 mb-3">Explore Other Sections</h4>
+            <ul class="space-y-2 text-xs sm:text-sm">
+              <li>
+                <a href="facilities.html" class="text-blue-700 hover:underline flex items-center justify-between">
+                  <span>Browse 15 Hospital Facilities</span>
+                  <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+              </li>
+              <li>
+                <a href="specialities.html" class="text-blue-700 hover:underline flex items-center justify-between">
+                  <span>Explore 15 Medical Specialities</span>
+                  <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+              </li>
+              <li>
+                <a href="gallery.html" class="text-blue-700 hover:underline flex items-center justify-between">
+                  <span>View Hospital Photo Gallery</span>
+                  <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+              </li>
+              <li>
+                <a href="about.html" class="text-blue-700 hover:underline flex items-center justify-between">
+                  <span>About Dr. Abhilash Jain Bhansali</span>
+                  <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="pt-16 pb-12 text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white">
+              <i data-lucide="activity" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <div class="font-heading font-extrabold text-white text-lg">GJS Multi Specialty Hospital</div>
+              <div class="text-xs text-blue-400">Madhurawada, Visakhapatnam</div>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-sm">
+            50-bed inpatient care, 24/7 emergency & ICU, advanced operation theatre with laparoscopy, and 15 medical specialities in Madhurawada.
+          </p>
+          <div class="pt-2">
+            <span class="text-xs text-slate-300 font-semibold block mb-1">Doctor:</span>
+            <span class="text-sm font-bold text-white">Dr. Abhilash Jain Bhansali</span>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase font-heading">Navigation</h4>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="facilities.html" class="hover:text-white transition-colors">Hospital Facilities</a></li>
+            <li><a href="specialities.html" class="hover:text-white transition-colors">Medical Specialities</a></li>
+            <li><a href="gallery.html" class="hover:text-white transition-colors">Photo Gallery</a></li>
+            <li><a href="help.html" class="text-blue-400 font-semibold hover:text-white transition-colors">Patient Help & FAQs</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase font-heading">Facilities</h4>
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-400">
+            <li>50-Bed Inpatient Care</li>
+            <li>24/7 Emergency Wing</li>
+            <li>Intensive Care Unit (ICU)</li>
+            <li>Suite & Single Rooms</li>
+            <li>General & Sharing Wards</li>
+            <li>Operation Theatre with Laparoscopy</li>
+            <li>24/7 Pharmacy & Laboratory</li>
+            <li>24-Hour Ambulance</li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase font-heading">Hospital Contact</h4>
+          <div class="space-y-2 text-xs sm:text-sm text-slate-400">
+            <p class="leading-relaxed">
+              MIG-223, Opp. ICICI Bank, Mithilapuri VUDA Colony, Madhurawada, Visakhapatnam, Andhra Pradesh 530041
+            </p>
+            <p>
+              <strong class="text-white">Phone:</strong> <br />
+              <a href="tel:7981225781" class="text-blue-400 font-bold hover:underline">7981225781</a>
+            </p>
+            <p>
+              <strong class="text-white">Email:</strong> <br />
+              <a href="mailto:gjshospitalvizag@gmail.com" class="text-blue-400 hover:underline">gjshospitalvizag@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>© 2026 GJS Multi Specialty Hospital. All rights reserved.</p>
+        <p class="text-center sm:text-right">
+          <a href="privacy.html" class="hover:underline">Privacy Policy</a>
+          <span class="mx-2">|</span>
+          <a href="terms.html" class="hover:underline">Terms of Use</a>
+          <span class="mx-2">|</span>
+          <span>Visakhapatnam, Andhra Pradesh</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scroll-top" aria-label="Scroll to top of page">
+    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>

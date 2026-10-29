@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | GJS Multi Specialty Hospital | Visakhapatnam</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="icon" href="assets/hospital-logo.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <link rel="stylesheet" href="assets/output.css" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body class="font-body bg-slate-50 text-slate-900 min-h-screen flex flex-col justify-between">
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav id="navbar" class="bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-blue-700 rounded-xl flex items-center justify-center text-white">
+            <i data-lucide="activity" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <div class="font-heading font-extrabold text-slate-900 text-lg">GJS Multi Specialty Hospital</div>
+            <div class="text-xs text-blue-700">Madhurawada, Visakhapatnam</div>
+          </div>
+        </a>
+
+        <div class="flex items-center gap-4">
+          <a href="index.html" class="nav-link text-sm font-semibold">Home</a>
+          <a href="contact.html" class="btn-primary text-xs py-2 px-4">Contact Hospital</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== 404 CONTENT ===================== -->
+  <main class="py-20 text-center px-4 flex-1 flex items-center justify-center">
+    <div class="max-w-lg mx-auto space-y-6">
+      <div class="w-20 h-20 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center mx-auto">
+        <i data-lucide="compass" class="w-10 h-10"></i>
+      </div>
+      <div class="section-tag">Error 404</div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 font-heading">Page Not Found</h1>
+      <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+        The page you are looking for may have been moved, renamed, or is temporarily unavailable. Reach our hospital desk directly by phone at <strong>7981225781</strong> or email at <strong>gjshospitalvizag@gmail.com</strong>.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+        <a href="index.html" class="btn-primary py-3 px-6">
+          <i data-lucide="home" class="w-4 h-4"></i>
+          <span>Return to Homepage</span>
+        </a>
+        <a href="tel:7981225781" class="btn-emergency py-3 px-6">
+          <i data-lucide="phone-call" class="w-4 h-4"></i>
+          <span>Emergency Call: 7981225781</span>
+        </a>
+      </div>
+
+      <div class="pt-8 border-t border-slate-200 grid grid-cols-3 gap-2 text-xs text-slate-500">
+        <a href="facilities.html" class="hover:text-blue-700 underline">Facilities</a>
+        <a href="specialities.html" class="hover:text-blue-700 underline">Specialities</a>
+        <a href="help.html" class="hover:text-blue-700 underline">Help & FAQs</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="py-6 bg-slate-900 text-slate-400 text-center text-xs">
+    <div class="max-w-7xl mx-auto px-4">
+      <p>© 2026 GJS Multi Specialty Hospital, Madhurawada, Visakhapatnam. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+  </script>
+</body>
+</html>

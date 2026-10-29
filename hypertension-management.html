@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hypertension Management | CardioCare</title>
+  <meta name="description"
+    content="Personalized hypertension management – expert medication plans, lifestyle coaching, and 24/7 blood pressure monitoring from a board‑certified cardiologist." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <!-- AOS -->
+  <link rel="stylesheet" href="assets/aos.css" />
+  <script src="assets/aos.js"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/output.css" />
+  <link rel="icon" href="assets/heart.png" type="image/x-icon">
+</head>
+
+<body class="font-body">
+
+  <!-- ===================== PRELOADER ===================== -->
+  <div id="preloader">
+    <div class="flex flex-col items-center gap-6">
+      <svg width="52" height="52" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M36 62s-28-18-28-36a16 16 0 0132 0 16 16 0 0132 0c0 18-28 36-28 36z" fill="#DC2626"
+          style="animation: heartbeat 1.4s ease-in-out infinite;"></path>
+      </svg>
+      <svg class="ecg-line" viewBox="0 0 260 60">
+        <path class="ecg-path"
+          d="M0,30 L40,30 L50,30 L55,10 L60,50 L65,5 L72,55 L78,30 L120,30 L130,30 L135,10 L140,50 L145,5 L152,55 L158,30 L200,30 L210,30 L215,10 L220,50 L225,5 L232,55 L238,30 L260,30" />
+      </svg>
+      <div class="text-white font-heading text-xl font-semibold tracking-wide mt-2">CardioCare</div>
+      <div class="text-slate-400 text-sm">Expert Heart Care Loading...</div>
+    </div>
+  </div>
+
+  <!-- ===================== TOP BAR ===================== -->
+  <div class="topbar py-2 text-white text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div class="flex items-center gap-6">
+          <span class="flex items-center gap-2">
+            <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+            <strong class="text-red-400">24/7 Emergency:</strong>
+            <a href="tel:+1-800-CARDIO" class="hover:text-red-400 transition-colors">+1 (800) CARDIO</a>
+          </span>
+        </div>
+        <div class="flex items-center gap-4 text-slate-400 text-xs">
+          <span>Mon–Sat: 8AM – 8PM</span>
+          <span>|</span>
+          <span>Emergency: 24/7</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav id="navbar" class="sticky top-0 z-50 bg-transparent transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-18">
+        <a href="index.html" class="flex items-center gap-2.5">
+          <div class="w-9 h-9 bg-red-600 rounded-lg flex items-center justify-center shadow-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+              <path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z" />
+            </svg>
+          </div>
+          <div>
+            <div class="font-heading font-800 text-lg leading-tight dark:text-white">CardioCare</div>
+            <div class="text-xs text-slate-600 leading-none">Heart Specialists</div>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="nav-link text-sm">Home</a>
+          <a href="index.html#about" class="nav-link text-sm">About</a>
+          <a href="index.html#services" class="nav-link text-sm">Services</a>
+          <a href="index.html#departments" class="nav-link text-sm">Departments</a>
+          <a href="index.html#appointments" class="nav-link text-sm">Appointments</a>
+          <a href="index.html#blog" class="nav-link text-sm">Blog</a>
+          <a href="index.html#contact" class="nav-link text-sm">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          
+          <a href="#appointment" class="hidden lg:flex btn-primary text-sm py-2.5 px-5">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            Book BP Consultation
+          </a>
+          <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-600 hover:text-white">
+            <i data-lucide="menu" class="w-6 h-6" id="menu-open"></i>
+            <i data-lucide="x" class="w-6 h-6 hidden" id="menu-close"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
+        <a href="index.html" class="nav-link text-slate-200 py-2.5 text-sm font-medium">Home</a>
+        <a href="index.html#about" class="nav-link text-slate-200 py-2.5 text-sm font-medium">About</a>
+        <a href="index.html#services" class="nav-link text-slate-200 py-2.5 text-sm font-medium">Services</a>
+        <a href="#appointment" class="btn-primary mt-3 w-full justify-center">Book BP Consultation</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="relative min-h-[85vh] flex items-center" style="background: var(--medical-gradient);">
+    <div class="absolute top-20 right-16 w-72 h-72 bg-red-600/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-40 left-10 w-56 h-56 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-flex items-center gap-2 bg-red-600/20 text-red-400 text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wide mb-4" data-aos="fade-up">
+            <i data-lucide="heart-pulse" class="w-3.5 h-3.5"></i>
+            Blood Pressure Control
+          </span>
+          <h1 class="font-heading font-extrabold text-5xl lg:text-6xl text-white leading-tight mb-6" data-aos="fade-up" data-aos-delay="100">
+            Hypertension<br /><span class="text-red-400">Management</span>
+          </h1>
+          <p class="text-slate-300 text-lg leading-relaxed mb-8 max-w-lg" data-aos="fade-up" data-aos-delay="200">
+            Expert‑guided blood pressure management combining advanced medication strategies, personalized lifestyle coaching, and continuous monitoring to protect your heart and overall health.
+          </p>
+          <div class="flex flex-wrap gap-4 mb-10" data-aos="fade-up" data-aos-delay="300">
+            <a href="#appointment" class="btn-primary text-base py-3.5 px-7">
+              <i data-lucide="clipboard-list" class="w-5 h-5"></i> Schedule BP Check
+            </a>
+            <a href="#approach" class="btn-outline text-base py-3.5 px-7">
+              <i data-lucide="search" class="w-5 h-5"></i> Our Approach
+            </a>
+          </div>
+        </div>
+        <div class="hidden lg:flex justify-center" data-aos="fade-left" data-aos-delay="200">
+          <div class="relative">
+            <div class="w-80 h-80 xl:w-96 xl:h-96 bg-gradient-to-br from-red-600/20 to-slate-600/20 rounded-3xl border border-white/10 flex items-center justify-center overflow-hidden animate-float">
+              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=400&fit=crop&auto=format" alt="Blood pressure check" class="object-cover w-full h-full" />
+            </div>
+            <div class="absolute -top-6 -right-6 bg-white rounded-xl px-4 py-3 shadow-xl border border-gray-100">
+              <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
+                  <i data-lucide="activity" class="w-4 h-4 text-red-600"></i>
+                </div>
+                <div>
+                  <div class="font-heading font-bold text-sm text-slate-800">BP Monitoring</div>
+                  <div class="text-xs text-slate-500">24/7 support</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHAT IS HYPERTENSION MANAGEMENT ===================== -->
+  <section class="section-padding bg-white dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <span class="section-tag mb-4">
+            <i data-lucide="info" class="w-3.5 h-3.5"></i>
+            The Program
+          </span>
+          <h2 class="font-heading font-bold text-3xl lg:text-4xl text-slate-900 dark:text-white mb-5">
+            What Is Hypertension Management?
+          </h2>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+            Our hypertension management program is a comprehensive, long‑term partnership with a board‑certified cardiologist. We don’t just prescribe pills — we assess your unique blood pressure patterns, identify contributing factors, and create a multi‑faceted plan that combines evidence‑based medication, nutrition, exercise, stress reduction, and routine monitoring.
+          </p>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3">
+              <div class="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-red-600"></i>
+              </div>
+              <span class="text-slate-700 dark:text-slate-300 text-sm">Thorough evaluation of secondary causes</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-red-600"></i>
+              </div>
+              <span class="text-slate-700 dark:text-slate-300 text-sm">Medication optimization & minimisation of side effects</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-red-600"></i>
+              </div>
+              <span class="text-slate-700 dark:text-slate-300 text-sm">Lifestyle modifications tailored to your routine</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-red-600"></i>
+              </div>
+              <span class="text-slate-700 dark:text-slate-300 text-sm">Home BP monitoring training & ongoing data review</span>
+            </div>
+          </div>
+        </div>
+        <div data-aos="fade-left">
+          <div class="bg-gradient-to-br from-red-50 to-white dark:from-slate-800 dark:to-slate-700 rounded-2xl p-8 border border-red-100 dark:border-slate-600">
+            <h3 class="font-heading font-semibold text-xl text-slate-800 dark:text-white mb-4 flex items-center gap-2">
+              <i data-lucide="clipboard-list" class="w-6 h-6 text-red-600"></i>
+              Your First Visit Includes
+            </h3>
+            <ul class="space-y-3 text-slate-600 dark:text-slate-300 text-sm">
+              <li class="flex items-start gap-2">
+                <i data-lucide="arrow-right" class="w-4 h-4 text-red-600 mt-0.5 flex-shrink-0"></i>
+                <span>Detailed BP history & medication review</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="arrow-right" class="w-4 h-4 text-red-600 mt-0.5 flex-shrink-0"></i>
+                <span>Physical exam & risk stratification</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="arrow-right" class="w-4 h-4 text-red-600 mt-0.5 flex-shrink-0"></i>
+                <span>In‑office BP measurement & review of home readings</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="arrow-right" class="w-4 h-4 text-red-600 mt-0.5 flex-shrink-0"></i>
+                <span>Lifestyle & dietary assessment</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="arrow-right" class="w-4 h-4 text-red-600 mt-0.5 flex-shrink-0"></i>
+                <span>Personalized plan with clear BP targets</span>
+              </li>
+            </ul>
+            <a href="#appointment" class="btn-primary mt-6 w-full justify-center text-sm py-3">
+              <i data-lucide="calendar-check" class="w-4 h-4"></i> Book Your First Visit
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== OUR APPROACH ===================== -->
+  <section id="approach" class="section-padding bg-slate-50 dark:bg-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <span class="section-tag mb-4">
+          <i data-lucide="star" class="w-3.5 h-3.5"></i>
+          Our Approach
+        </span>
+        <h2 class="font-heading font-bold text-3xl lg:text-4xl text-slate-900 dark:text-white mt-3">A Personalized BP Control Plan</h2>
+        <p class="text-slate-500 dark:text-slate-400 mt-3 max-w-xl mx-auto">We address hypertension from every angle — medication, lifestyle, and continuous monitoring — to achieve lasting results.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="card-medical dark:bg-slate-700 text-center" data-aos="fade-up">
+          <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="pill" class="w-7 h-7 text-red-600"></i>
+          </div>
+          <h3 class="font-heading font-semibold text-lg text-slate-800 dark:text-white mb-2">Medication Management</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-sm">We fine‑tune your medications to achieve target BP while minimising side effects, using the latest guidelines and, when possible, simplifying your regimen.</p>
+        </div>
+        <div class="card-medical dark:bg-slate-700 text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="salad" class="w-7 h-7 text-blue-600"></i>
+          </div>
+          <h3 class="font-heading font-semibold text-lg text-slate-800 dark:text-white mb-2">Lifestyle Coaching</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-sm">Evidence‑based guidance on DASH diet, sodium reduction, exercise, weight management, stress reduction, and sleep hygiene – designed to fit your life.</p>
+        </div>
+        <div class="card-medical dark:bg-slate-700 text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="smartphone" class="w-7 h-7 text-green-600"></i>
+          </div>
+          <h3 class="font-heading font-semibold text-lg text-slate-800 dark:text-white mb-2">Continuous Monitoring</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-sm">We teach you to use a home BP monitor correctly and review your log regularly. Telemedicine check‑ins keep you on track between visits.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROCESS ===================== -->
+  <section class="section-padding bg-white dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <span class="section-tag mb-4">
+          <i data-lucide="git-branch" class="w-3.5 h-3.5"></i>
+          Process
+        </span>
+        <h2 class="font-heading font-bold text-3xl lg:text-4xl text-slate-900 dark:text-white mt-3">Your Blood Pressure Control Journey</h2>
+        <p class="text-slate-500 dark:text-slate-400 mt-3 max-w-xl mx-auto">Four steps to sustainable blood pressure control.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+        <div class="card-medical dark:bg-slate-800 text-center" data-aos="fade-up">
+          <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg relative z-10">
+            <i data-lucide="stethoscope" class="w-7 h-7 text-white"></i>
+          </div>
+          <h3 class="font-heading font-bold text-base text-slate-800 dark:text-white mb-2">1. Comprehensive Assessment</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-sm">Detailed history, exam, and tests to understand your specific hypertension type and risk.</p>
+        </div>
+        <div class="card-medical dark:bg-slate-800 text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg relative z-10">
+            <i data-lucide="file-text" class="w-7 h-7 text-white"></i>
+          </div>
+          <h3 class="font-heading font-bold text-base text-slate-800 dark:text-white mb-2">2. Personalized Plan</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-sm">We co‑create a plan with you: medication schedule, dietary targets, exercise routine, and BP measurement protocol.</p>
+        </div>
+        <div class="card-medical dark:bg-slate-800 text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg relative z-10">
+            <i data-lucide="trending-up" class="w-7 h-7 text-white"></i>
+          </div>
+          <h3 class="font-heading font-bold text-base text-slate-800 dark:text-white mb-2">3. Active Coaching</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-sm">Regular follow‑ups — in person or via telehealth — to adjust therapy, review progress, and keep you motivated.</p>
+        </div>
+        <div class="card-medical dark:bg-slate-800 text-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg relative z-10">
+            <i data-lucide="shield-check" class="w-7 h-7 text-white"></i>
+          </div>
+          <h3 class="font-heading font-bold text-base text-slate-800 dark:text-white mb-2">4. Long‑Term Control</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-sm">Ongoing monitoring and support to maintain healthy BP for life, preventing heart attacks and strokes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DOCTOR'S NOTE ===================== -->
+  <section class="section-padding bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <span class="inline-flex items-center gap-2 bg-red-600/20 text-red-400 text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wide mb-4">
+            <i data-lucide="award" class="w-3.5 h-3.5"></i>
+            Expert Cardiologist
+          </span>
+          <h2 class="font-heading font-bold text-3xl lg:text-4xl mb-5">Dr. Jonathan Carter on Hypertension</h2>
+          <p class="text-slate-300 leading-relaxed mb-4">
+            “High blood pressure rarely causes symptoms until it has already damaged your heart, kidneys, or brain. My goal is to help you understand your numbers, demystify treatment, and create a plan so simple and effective that normal blood pressure becomes your new normal.”
+          </p>
+          <div class="flex items-center gap-4 mt-6">
+            <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center font-heading font-bold text-white text-lg">JC</div>
+            <div>
+              <div class="font-heading font-semibold">Dr. Jonathan Carter, MD, FACC</div>
+              <div class="text-slate-400 text-sm">Hypertension Specialist, 20+ Years Experience</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6" data-aos="fade-left">
+          <blockquote class="italic text-slate-300 mb-4">“I had been on three different BP medications for years with terrible side effects. Dr. Carter simplified my regimen and now my BP is 120/78. I feel like myself again.”</blockquote>
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center font-heading font-bold text-white text-xs">RB</div>
+            <div>
+              <div class="text-white text-sm font-medium">Robert Barnes</div>
+              <div class="text-slate-400 text-xs">Hypertension Patient, 2023</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="section-padding bg-white dark:bg-slate-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <span class="section-tag mb-4">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          FAQ
+        </span>
+        <h2 class="font-heading font-bold text-3xl lg:text-4xl text-slate-900 dark:text-white mt-3">Hypertension Questions</h2>
+        <p class="text-slate-500 dark:text-slate-400 mt-3">Common questions about managing high blood pressure with CardioCare.</p>
+      </div>
+
+      <div class="space-y-0" data-aos="fade-up">
+        <div class="faq-item dark:border-slate-700">
+          <div class="faq-question text-slate-800 dark:text-white" onclick="toggleFAQ(this)">
+            What is considered high blood pressure?
+            <i data-lucide="plus" class="w-5 h-5 text-red-600 faq-icon flex-shrink-0"></i>
+          </div>
+          <div class="faq-answer">According to the American Heart Association, a consistent reading of 130/80 mmHg or higher is considered hypertension. We'll help you understand your specific target and what it means for your health.</div>
+        </div>
+        <div class="faq-item dark:border-slate-700">
+          <div class="faq-question text-slate-800 dark:text-white" onclick="toggleFAQ(this)">
+            Can lifestyle changes really replace medication?
+            <i data-lucide="plus" class="w-5 h-5 text-red-600 faq-icon flex-shrink-0"></i>
+          </div>
+          <div class="faq-answer">For many patients, yes — especially with early‑stage hypertension. Weight loss, the DASH diet, reduced sodium, regular exercise, and stress management can significantly lower BP. However, some people will still need medication, and we'll guide you on the right balance.</div>
+        </div>
+        <div class="faq-item dark:border-slate-700">
+          <div class="faq-question text-slate-800 dark:text-white" onclick="toggleFAQ(this)">
+            How often will I need follow‑up visits?
+            <i data-lucide="plus" class="w-5 h-5 text-red-600 faq-icon flex-shrink-0"></i>
+          </div>
+          <div class="faq-answer">Initially, every 2–4 weeks until your BP stabilises. Once controlled, check‑ins can be spaced to every 3–6 months, with telemedicine options available for medication reviews and BP log analysis.</div>
+        </div>
+        <div class="faq-item dark:border-slate-700">
+          <div class="faq-question text-slate-800 dark:text-white" onclick="toggleFAQ(this)">
+            Do you provide home BP monitors?
+            <i data-lucide="plus" class="w-5 h-5 text-red-600 faq-icon flex-shrink-0"></i>
+          </div>
+          <div class="faq-answer">We recommend and help you select a validated home BP monitor. We'll train you on proper technique and can review your readings remotely. We also offer ambulatory 24‑hour BP monitoring for a more complete picture.</div>
+        </div>
+        <div class="faq-item dark:border-slate-700">
+          <div class="faq-question text-slate-800 dark:text-white" onclick="toggleFAQ(this)">
+            Is hypertension management covered by insurance?
+            <i data-lucide="plus" class="w-5 h-5 text-red-600 faq-icon flex-shrink-0"></i>
+          </div>
+          <div class="faq-answer">Yes, most insurance plans cover hypertension consultations, monitoring, and medically necessary tests. Our billing team can verify your coverage before your appointment.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== APPOINTMENT FORM ===================== -->
+  <section id="appointment" class="section-padding bg-slate-50 dark:bg-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <span class="section-tag mb-4">
+          <i data-lucide="calendar-check" class="w-3.5 h-3.5"></i>
+          Get Started
+        </span>
+        <h2 class="font-heading font-bold text-3xl lg:text-4xl text-slate-900 dark:text-white mt-3">Request Your Hypertension Consultation</h2>
+        <p class="text-slate-500 dark:text-slate-400 mt-3">Complete the form and we’ll confirm your appointment within 2 business hours.</p>
+      </div>
+
+      <div class="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-8 lg:p-12 shadow-2xl max-w-4xl mx-auto" data-aos="fade-up">
+        <form id="hypertension-form" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="flex flex-col gap-1.5">
+            <label class="text-slate-300 text-sm font-medium">Full Name *</label>
+            <input type="text" required placeholder="Your full name" class="bg-slate-700 border border-slate-600 text-white placeholder-slate-400 rounded-lg px-4 py-3 text-sm" />
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label class="text-slate-300 text-sm font-medium">Email Address *</label>
+            <input type="email" required placeholder="your@email.com" class="bg-slate-700 border border-slate-600 text-white placeholder-slate-400 rounded-lg px-4 py-3 text-sm" />
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label class="text-slate-300 text-sm font-medium">Phone Number *</label>
+            <input type="tel" required placeholder="+1 (555) 000-0000" class="bg-slate-700 border border-slate-600 text-white placeholder-slate-400 rounded-lg px-4 py-3 text-sm" />
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label class="text-slate-300 text-sm font-medium">Preferred Date *</label>
+            <input type="date" required class="bg-slate-700 border border-slate-600 text-white rounded-lg px-4 py-3 text-sm" />
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label class="text-slate-300 text-sm font-medium">Known BP (if available)</label>
+            <input type="text" placeholder="e.g., 145/92" class="bg-slate-700 border border-slate-600 text-white placeholder-slate-400 rounded-lg px-4 py-3 text-sm" />
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label class="text-slate-300 text-sm font-medium">Current Medications (if any)</label>
+            <input type="text" placeholder="List your BP medications" class="bg-slate-700 border border-slate-600 text-white placeholder-slate-400 rounded-lg px-4 py-3 text-sm" />
+          </div>
+          <div class="md:col-span-2 flex flex-col gap-1.5">
+            <label class="text-slate-300 text-sm font-medium">Additional Notes</label>
+            <textarea placeholder="Any specific concerns or symptoms (e.g., dizziness, headaches, family history)" rows="3" class="bg-slate-700 border border-slate-600 text-white placeholder-slate-400 rounded-lg px-4 py-3 text-sm"></textarea>
+          </div>
+          <div class="md:col-span-2 flex justify-center mt-2">
+            <button type="submit" class="btn-primary px-10 py-3.5 text-base">
+              <i data-lucide="send" class="w-5 h-5"></i> Submit Request
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA STRIP ===================== -->
+  <div class="bg-red-600 py-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3 text-white">
+        <span class="w-3 h-3 bg-white rounded-full animate-pulse"></span>
+        <span class="font-heading font-semibold">Worried about your blood pressure? Our team is here to help.</span>
+      </div>
+      <a href="tel:+18002273461" class="bg-white text-red-600 font-heading font-bold px-6 py-2.5 rounded-lg hover:bg-red-50 transition-all text-sm flex items-center gap-2">
+        <i data-lucide="phone" class="w-4 h-4"></i> Call Now
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer  -->
+  <footer class="text-white overflow-hidden relative">
+    <!-- Decorative Background Elements -->
+    <div class="absolute top-0 left-0 w-[500px] h-[500px] rounded-full opacity-[0.04] pointer-events-none"
+      style="background: radial-gradient(circle, #DC2626, transparent); transform: translate(-40%, -40%);"></div>
+    <div class="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full opacity-[0.03] pointer-events-none"
+      style="background: radial-gradient(circle, #0EA5E9, transparent); transform: translate(30%, 30%);"></div>
+
+    <!-- ECG Decorative Line -->
+    <div class="w-full overflow-hidden border-b border-white/5">
+      <svg viewBox="0 0 1440 40" preserveAspectRatio="none" class="w-full h-10" fill="none">
+        <path
+          d="M0,20 L200,20 L240,20 L255,4 L265,36 L272,2 L282,38 L292,20 L500,20 L540,20 L555,4 L565,36 L572,2 L582,38 L592,20 L800,20 L840,20 L855,4 L865,36 L872,2 L882,38 L892,20 L1100,20 L1140,20 L1155,4 L1165,36 L1172,2 L1182,38 L1192,20 L1440,20"
+          stroke="#DC2626" stroke-width="1.5" stroke-opacity="0.5" />
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10">
+
+      <!-- TOP ROW: Brand + Newsletter -->
+      <div class="grid lg:grid-cols-2 gap-10 items-start mb-14 pb-14 border-b border-white/8">
+        <!-- Brand Block -->
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center shadow-lg shadow-red-900/50">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
+                <path
+                  d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z" />
+              </svg>
+            </div>
+            <div>
+              <div class="font-heading font-extrabold text-2xl text-white tracking-tight">CardioCare</div>
+              <div class="text-xs text-red-400 font-semibold uppercase tracking-widest">Heart Specialists</div>
+            </div>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6 max-w-md">
+            CardioCare is a premier cardiology clinic dedicated to delivering world-class heart care with compassion.
+            Since 2003, we've been the most trusted cardiac practice in the region, combining advanced technology with a
+            patient-first philosophy.
+          </p>
+
+          <!-- Certifications Row -->
+          <div class="flex flex-wrap gap-3 mb-6">
+            <div class="flex items-center gap-2 bg-white/6 border border-white/10 rounded-lg px-3 py-2">
+              <div class="w-7 h-7 bg-red-600/30 rounded-full flex items-center justify-center flex-shrink-0">
+                <i data-lucide="award" class="w-3.5 h-3.5 text-red-400"></i>
+              </div>
+              <span class="text-slate-300 text-xs font-medium">FACC Certified</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white/6 border border-white/10 rounded-lg px-3 py-2">
+              <div class="w-7 h-7 bg-blue-600/30 rounded-full flex items-center justify-center flex-shrink-0">
+                <i data-lucide="shield-check" class="w-3.5 h-3.5 text-blue-400"></i>
+              </div>
+              <span class="text-slate-300 text-xs font-medium">HIPAA Compliant</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white/6 border border-white/10 rounded-lg px-3 py-2">
+              <div class="w-7 h-7 bg-green-600/30 rounded-full flex items-center justify-center flex-shrink-0">
+                <i data-lucide="star" class="w-3.5 h-3.5 text-green-400"></i>
+              </div>
+              <span class="text-slate-300 text-xs font-medium">Top Rated 2024</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white/6 border border-white/10 rounded-lg px-3 py-2">
+              <div class="w-7 h-7 bg-yellow-600/30 rounded-full flex items-center justify-center flex-shrink-0">
+                <i data-lucide="heart" class="w-3.5 h-3.5 text-yellow-400"></i>
+              </div>
+              <span class="text-slate-300 text-xs font-medium">AHA Member</span>
+            </div>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="flex items-center gap-3">
+            <span class="text-slate-500 text-xs mr-1">Follow Us:</span>
+            <a href="#"
+              class="w-9 h-9 bg-[#1877F2] rounded-full flex items-center justify-center hover:opacity-90 hover:scale-110 transition-all"
+              title="Facebook">
+              <svg width="15" height="15" fill="white" viewBox="0 0 24 24">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+            <a href="#"
+              class="w-9 h-9 rounded-full flex items-center justify-center hover:opacity-90 hover:scale-110 transition-all"
+              style="background: linear-gradient(45deg, #f09433,#e6683c,#dc2743,#cc2366,#bc1888)" title="Instagram">
+              <svg width="15" height="15" fill="white" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="#"
+              class="w-9 h-9 bg-[#0077B5] rounded-full flex items-center justify-center hover:opacity-90 hover:scale-110 transition-all"
+              title="LinkedIn">
+              <svg width="15" height="15" fill="white" viewBox="0 0 24 24">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a href="#"
+              class="w-9 h-9 bg-[#FF0000] rounded-full flex items-center justify-center hover:opacity-90 hover:scale-110 transition-all"
+              title="YouTube">
+              <svg width="15" height="15" fill="white" viewBox="0 0 24 24">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Newsletter Block -->
+        <div class="bg-gradient-to-br from-red-600/15 to-slate-800/40 border border-red-500/20 rounded-2xl p-7">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
+              <i data-lucide="mail-check" class="w-5 h-5 text-white"></i>
+            </div>
+            <div>
+              <h4 class="font-heading font-bold text-lg text-white">Heart Health Newsletter</h4>
+              <p class="text-slate-400 text-xs">Join 12,000+ subscribers</p>
+            </div>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-5">Get weekly tips on heart health, cardiology news,
+            treatment breakthroughs, and clinic updates delivered right to your inbox.</p>
+          <form class="flex gap-2.5 mb-4" onsubmit="handleFooterNewsletter(event)">
+            <input type="email" placeholder="Enter your email address" required
+              class="flex-1 bg-white/8 border border-white/15 text-white placeholder-slate-500 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-red-500 transition-all" />
+            <button type="submit"
+              class="bg-red-600 hover:bg-red-700 text-white font-heading font-semibold px-5 py-3 rounded-lg text-sm transition-all whitespace-nowrap flex items-center gap-1.5 flex-shrink-0">
+              <i data-lucide="send" class="w-4 h-4"></i> Subscribe
+            </button>
+          </form>
+          <p class="text-slate-600 text-xs flex items-center gap-1.5">
+            <i data-lucide="lock" class="w-3.5 h-3.5 text-slate-500"></i>
+            Your privacy is protected. Unsubscribe anytime. No spam.
+          </p>
+        </div>
+      </div>
+
+      <!-- MAIN LINKS GRID: 5 columns -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-14 pb-14 border-b border-white/8">
+
+        <!-- Medical Services -->
+        <div>
+          <h4 class="font-heading font-semibold text-sm text-white mb-5 flex items-center gap-2">
+            <span class="w-1 h-4 bg-red-600 rounded-full inline-block"></span>
+            Medical Services
+          </h4>
+          <ul class="space-y-3">
+            <li><a href="heart-health.html"
+                class="text-slate-400 text-sm hover:text-red-400 transition-colors flex items-center gap-1.5 group"><i
+                  data-lucide="chevron-right"
+                  class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-red-500 flex-shrink-0"></i>Heart
+                Consultation</a></li>
+            <li><a href="ECG-diagnostics.html"
+                class="text-slate-400 text-sm hover:text-red-400 transition-colors flex items-center gap-1.5 group"><i
+                  data-lucide="chevron-right"
+                  class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-red-500 flex-shrink-0"></i>ECG
+                & Diagnostics</a></li>
+            <li><a href="hypertension-management.html"
+                class="text-slate-400 text-sm hover:text-red-400 transition-colors flex items-center gap-1.5 group"><i
+                  data-lucide="chevron-right"
+                  class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-red-500 flex-shrink-0"></i>Hypertension
+                Care</a></li>
+            <li><a href="cardiac-rehabilitation.html"
+                class="text-slate-400 text-sm hover:text-red-400 transition-colors flex items-center gap-1.5 group"><i
+                  data-lucide="chevron-right"
+                  class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-red-500 flex-shrink-0"></i>Cardiac
+                Rehab</a></li>
+            <li><a href="preventive-cardiology.html"
+                class="text-slate-400 text-sm hover:text-red-400 transition-colors flex items-center gap-1.5 group"><i
+                  data-lucide="chevron-right"
+                  class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-red-500 flex-shrink-0"></i>Preventive
+                Care</a></li>
+            <li><a href="Emergency.html"
+                class="text-slate-400 text-sm hover:text-red-400 transition-colors flex items-center gap-1.5 group"><i
+                  data-lucide="chevron-right"
+                  class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-red-500 flex-shrink-0"></i>Emergency
+                Care</a></li>
+            <li><a href="#departments"
+                class="text-slate-400 text-sm hover:text-red-400 transition-colors flex items-center gap-1.5 group"><i
+                  data-lucide="chevron-right"
+                  class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-red-500 flex-shrink-0"></i>Electrophysiology</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Patient Resources -->
+        <div>
+          <h4 class="font-heading font-semibold text-sm text-white mb-5 flex items-center gap-2">
+            <span class="w-1 h-4 bg-blue-500 rounded-full inline-block"></span>
+            Patient Resources
+          </h4>
+          <ul class="space-y-3">
+            <li><a href="#appointments"
+                class="text-slate-400 text-sm hover:text-red-400 transition-colors flex items-center gap-1.5 group"><i
+                  data-lucide="chevron-right"
+                  class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-red-500 flex-shrink-0"></i>Book
+                Appointment</a></li>
+            <li><a href="#"
+                class="text-slate-400 text-sm hover:text-red-400 transition-colors flex items-center gap-1.5 group"><i
+                  data-lucide="chevron-right"
+                  class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-red-500 flex-shrink-0"></i>Patient
+                Portal</a></li>
+            <li><a href="#"
+                class="text-slate-400 text-sm hover:text-red-400 transition-colors flex items-center gap-1.5 group"><i
+                  data-lucide="chevron-right"
+                  class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-red-500 flex-shrink-0"></i>Telehealth</a>
+            </li>
+            <li><a href="#faq"
+                class="text-slate-400 text-sm hover:text-red-400 transition-colors flex items-center gap-1.5 group"><i
+                  data-lucide="chevron-right"
+                  class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-red-500 flex-shrink-0"></i>Patient
+                FAQ</a></li>
+            <li><a href="#"
+                class="text-slate-400 text-sm hover:text-red-400 transition-colors flex items-center gap-1.5 group"><i
+                  data-lucide="chevron-right"
+                  class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-red-500 flex-shrink-0"></i>Insurance
+                Info</a></li>
+            <li><a href="#"
+                class="text-slate-400 text-sm hover:text-red-400 transition-colors flex items-center gap-1.5 group"><i
+                  data-lucide="chevron-right"
+                  class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-red-500 flex-shrink-0"></i>Medical
+                Records</a></li>
+            <li><a href="#"
+                class="text-slate-400 text-sm hover:text-red-400 transition-colors flex items-center gap-1.5 group"><i
+                  data-lucide="chevron-right"
+                  class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-red-500 flex-shrink-0"></i>Billing
+                & Payments</a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-heading font-semibold text-sm text-white mb-5 flex items-center gap-2">
+            <span class="w-1 h-4 bg-green-500 rounded-full inline-block"></span>
+            Quick Links
+          </h4>
+          <ul class="space-y-3">
+            <li><a href="#about"
+                class="text-slate-400 text-sm hover:text-red-400 transition-colors flex items-center gap-1.5 group"><i
+                  data-lucide="chevron-right"
+                  class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-red-500 flex-shrink-0"></i>About
+                Doctor</a></li>
+            <li><a href="#departments"
+                class="text-slate-400 text-sm hover:text-red-400 transition-colors flex items-center gap-1.5 group"><i
+                  data-lucide="chevron-right"
+                  class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-red-500 flex-shrink-0"></i>Departments</a>
+            </li>
+            <li><a href="blog.html"
+                class="text-slate-400 text-sm hover:text-red-400 transition-colors flex items-center gap-1.5 group"><i
+                  data-lucide="chevron-right"
+                  class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-red-500 flex-shrink-0"></i>Health
+                Blog</a></li>
+            <li><a href="#"
+                class="text-slate-400 text-sm hover:text-red-400 transition-colors flex items-center gap-1.5 group"><i
+                  data-lucide="chevron-right"
+                  class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-red-500 flex-shrink-0"></i>Careers</a>
+            </li>
+            <li><a href="#"
+                class="text-slate-400 text-sm hover:text-red-400 transition-colors flex items-center gap-1.5 group"><i
+                  data-lucide="chevron-right"
+                  class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-red-500 flex-shrink-0"></i>Research</a>
+            </li>
+            <li><a href="#contact"
+                class="text-slate-400 text-sm hover:text-red-400 transition-colors flex items-center gap-1.5 group"><i
+                  data-lucide="chevron-right"
+                  class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-red-500 flex-shrink-0"></i>Contact
+                Us</a></li>
+            <li><a href="#"
+                class="text-slate-400 text-sm hover:text-red-400 transition-colors flex items-center gap-1.5 group"><i
+                  data-lucide="chevron-right"
+                  class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-red-500 flex-shrink-0"></i>Sitemap</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Working Hours -->
+        <div>
+          <h4 class="font-heading font-semibold text-sm text-white mb-5 flex items-center gap-2">
+            <span class="w-1 h-4 bg-yellow-500 rounded-full inline-block"></span>
+            Working Hours
+          </h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex justify-between gap-4">
+              <span class="text-slate-400">Monday</span>
+              <span class="text-slate-300 font-medium text-xs">8AM – 8PM</span>
+            </li>
+            <li class="flex justify-between gap-4">
+              <span class="text-slate-400">Tuesday</span>
+              <span class="text-slate-300 font-medium text-xs">8AM – 8PM</span>
+            </li>
+            <li class="flex justify-between gap-4">
+              <span class="text-slate-400">Wednesday</span>
+              <span class="text-slate-300 font-medium text-xs">8AM – 8PM</span>
+            </li>
+            <li class="flex justify-between gap-4">
+              <span class="text-slate-400">Thursday</span>
+              <span class="text-slate-300 font-medium text-xs">8AM – 8PM</span>
+            </li>
+            <li class="flex justify-between gap-4">
+              <span class="text-slate-400">Friday</span>
+              <span class="text-slate-300 font-medium text-xs">8AM – 6PM</span>
+            </li>
+            <li class="flex justify-between gap-4">
+              <span class="text-slate-400">Saturday</span>
+              <span class="text-slate-300 font-medium text-xs">9AM – 5PM</span>
+            </li>
+            <li class="flex justify-between gap-4">
+              <span class="text-slate-400">Sunday</span>
+              <span class="text-red-400 font-semibold text-xs">Emergency Only</span>
+            </li>
+          </ul>
+          <div class="mt-4 bg-green-600/15 border border-green-500/25 rounded-lg px-3 py-2 flex items-center gap-2">
+            <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse flex-shrink-0"></span>
+            <span class="text-green-400 text-xs font-semibold">Currently Open</span>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="font-heading font-semibold text-sm text-white mb-5 flex items-center gap-2">
+            <span class="w-1 h-4 bg-red-500 rounded-full inline-block"></span>
+            Contact Info
+          </h4>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-red-600/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i data-lucide="map-pin" class="w-4 h-4 text-red-400"></i>
+              </div>
+              <div>
+                <div class="text-slate-300 text-xs font-semibold mb-0.5">Our Location</div>
+                <div class="text-slate-500 text-xs leading-relaxed">123 Medical Center Dr,<br />Suite 400, New York, NY
+                  10001</div>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-red-600/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i data-lucide="phone" class="w-4 h-4 text-red-400"></i>
+              </div>
+              <div>
+                <div class="text-slate-300 text-xs font-semibold mb-0.5">Phone</div>
+                <a href="tel:+18002273461" class="text-slate-500 text-xs hover:text-red-400 transition-colors">+1 (800)
+                  CARDIO</a><br />
+                <a href="tel:+12125550123" class="text-slate-500 text-xs hover:text-red-400 transition-colors">+1 (212)
+                  555-0123</a>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-red-600/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i data-lucide="mail" class="w-4 h-4 text-red-400"></i>
+              </div>
+              <div>
+                <div class="text-slate-300 text-xs font-semibold mb-0.5">Email</div>
+                <a href="mailto:care@cardiocare.com"
+                  class="text-slate-500 text-xs hover:text-red-400 transition-colors">care@cardiocare.com</a><br />
+                <a href="mailto:appointments@cardiocare.com"
+                  class="text-slate-500 text-xs hover:text-red-400 transition-colors">appointments@cardiocare.com</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- GALLERY ROW: Splashbase/Unsplash Images -->
+      <div class="mb-14 pb-14 border-b border-white/8">
+        <div class="flex items-center justify-between mb-5">
+          <h4 class="font-heading font-semibold text-sm text-white flex items-center gap-2">
+            <span class="w-1 h-4 bg-red-500 rounded-full inline-block"></span>
+            Gallery — Our Clinic & Team
+          </h4>
+          <a href="#"
+            class="text-red-400 text-xs font-semibold hover:text-red-300 transition-colors flex items-center gap-1">
+            View All <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+        <div class="grid grid-cols-3 sm:grid-cols-6 gap-2.5">
+          <!-- Unsplash real images - medical/cardiology/doctor themed -->
+          <a href="#" class="block rounded-xl overflow-hidden aspect-square group relative">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=200&h=200&fit=crop&auto=format"
+              alt="Doctor consultation" loading="lazy"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div
+              class="absolute inset-0 bg-red-600/0 group-hover:bg-red-600/30 transition-all duration-300 flex items-center justify-center">
+              <i data-lucide="zoom-in"
+                class="w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"></i>
+            </div>
+          </a>
+          <a href="#" class="block rounded-xl overflow-hidden aspect-square group relative">
+            <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=200&h=200&fit=crop&auto=format"
+              alt="Medical equipment" loading="lazy"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div
+              class="absolute inset-0 bg-red-600/0 group-hover:bg-red-600/30 transition-all duration-300 flex items-center justify-center">
+              <i data-lucide="zoom-in"
+                class="w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"></i>
+            </div>
+          </a>
+          <a href="#" class="block rounded-xl overflow-hidden aspect-square group relative">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=200&h=200&fit=crop&auto=format"
+              alt="Hospital corridor" loading="lazy"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div
+              class="absolute inset-0 bg-red-600/0 group-hover:bg-red-600/30 transition-all duration-300 flex items-center justify-center">
+              <i data-lucide="zoom-in"
+                class="w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"></i>
+            </div>
+          </a>
+          <a href="#" class="block rounded-xl overflow-hidden aspect-square group relative">
+            <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=200&h=200&fit=crop&auto=format"
+              alt="ECG monitor" loading="lazy"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div
+              class="absolute inset-0 bg-red-600/0 group-hover:bg-red-600/30 transition-all duration-300 flex items-center justify-center">
+              <i data-lucide="zoom-in"
+                class="w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"></i>
+            </div>
+          </a>
+          <a href="#" class="block rounded-xl overflow-hidden aspect-square group relative">
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200&h=200&fit=crop&auto=format"
+              alt="Medical team" loading="lazy"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div
+              class="absolute inset-0 bg-red-600/0 group-hover:bg-red-600/30 transition-all duration-300 flex items-center justify-center">
+              <i data-lucide="zoom-in"
+                class="w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"></i>
+            </div>
+          </a>
+          <a href="#" class="block rounded-xl overflow-hidden aspect-square group relative">
+            <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=200&h=200&fit=crop&auto=format"
+              alt="Stethoscope" loading="lazy"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div
+              class="absolute inset-0 bg-red-600/0 group-hover:bg-red-600/30 transition-all duration-300 flex items-center justify-center">
+              <i data-lucide="zoom-in"
+                class="w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- BOTTOM ROW: Accreditations + Map Preview -->
+      <div class="grid md:grid-cols-2 gap-8 mb-10 pb-10 border-b border-white/8">
+        <!-- Accreditations & Awards -->
+        <div>
+          <h4 class="font-heading font-semibold text-sm text-white mb-5 flex items-center gap-2">
+            <span class="w-1 h-4 bg-yellow-400 rounded-full inline-block"></span>
+            Accreditations & Awards
+          </h4>
+          <div class="grid grid-cols-2 gap-3">
+            <div
+              class="bg-white/5 border border-white/8 rounded-xl p-4 flex items-center gap-3 hover:bg-white/8 transition-colors">
+              <div class="w-10 h-10 bg-yellow-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i data-lucide="award" class="w-5 h-5 text-yellow-400"></i>
+              </div>
+              <div>
+                <div class="text-white text-xs font-semibold">Best Cardiac Clinic</div>
+                <div class="text-slate-400 text-xs">NY Health Awards 2024</div>
+              </div>
+            </div>
+            <div
+              class="bg-white/5 border border-white/8 rounded-xl p-4 flex items-center gap-3 hover:bg-white/8 transition-colors">
+              <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i data-lucide="shield-check" class="w-5 h-5 text-blue-400"></i>
+              </div>
+              <div>
+                <div class="text-white text-xs font-semibold">JCAHO Accredited</div>
+                <div class="text-slate-400 text-xs">Joint Commission 2024</div>
+              </div>
+            </div>
+            <div
+              class="bg-white/5 border border-white/8 rounded-xl p-4 flex items-center gap-3 hover:bg-white/8 transition-colors">
+              <div class="w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i data-lucide="heart" class="w-5 h-5 text-red-400"></i>
+              </div>
+              <div>
+                <div class="text-white text-xs font-semibold">AHA Gold Plus</div>
+                <div class="text-slate-400 text-xs">Heart Care Quality 2024</div>
+              </div>
+            </div>
+            <div
+              class="bg-white/5 border border-white/8 rounded-xl p-4 flex items-center gap-3 hover:bg-white/8 transition-colors">
+              <div class="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i data-lucide="star" class="w-5 h-5 text-green-400"></i>
+              </div>
+              <div>
+                <div class="text-white text-xs font-semibold">US News Top Rated</div>
+                <div class="text-slate-400 text-xs">Top 10 Cardiologists 2024</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map + Recent Blog Posts -->
+        <div>
+          <h4 class="font-heading font-semibold text-sm text-white mb-5 flex items-center gap-2">
+            <span class="w-1 h-4 bg-blue-500 rounded-full inline-block"></span>
+            Recent Health Articles
+          </h4>
+          <div class="space-y-3">
+            <a href="#blog"
+              class="flex items-start gap-3 p-3 bg-white/4 border border-white/8 rounded-xl hover:bg-white/8 transition-all group">
+              <img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=80&h=80&fit=crop&auto=format"
+                alt="Heart health blog" loading="lazy" class="w-14 h-14 rounded-lg object-cover flex-shrink-0" />
+              <div class="min-w-0">
+                <div
+                  class="text-white text-xs font-semibold leading-snug group-hover:text-red-400 transition-colors line-clamp-2">
+                  10 Early Warning Signs of Heart Disease You Shouldn't Ignore</div>
+                <div class="text-slate-400 text-xs mt-1 flex items-center gap-1.5">
+                  <i data-lucide="calendar" class="w-3 h-3"></i> May 15, 2026
+                </div>
+              </div>
+            </a>
+            <a href="blog-detail.html"
+              class="flex items-start gap-3 p-3 bg-white/4 border border-white/8 rounded-xl hover:bg-white/8 transition-all group">
+              <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=80&h=80&fit=crop&auto=format"
+                alt="Blood pressure tips" loading="lazy" class="w-14 h-14 rounded-lg object-cover flex-shrink-0" />
+              <div class="min-w-0">
+                <div
+                  class="text-white text-xs font-semibold leading-snug group-hover:text-red-400 transition-colors line-clamp-2">
+                  How to Lower Your Blood Pressure Naturally</div>
+                <div class="text-slate-400 text-xs mt-1 flex items-center gap-1.5">
+                  <i data-lucide="calendar" class="w-3 h-3"></i> April 28, 2026
+                </div>
+              </div>
+            </a>
+            <a href="#blog"
+              class="flex items-start gap-3 p-3 bg-white/4 border border-white/8 rounded-xl hover:bg-white/8 transition-all group">
+              <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=80&h=80&fit=crop&auto=format"
+                alt="Mediterranean diet heart" loading="lazy" class="w-14 h-14 rounded-lg object-cover flex-shrink-0" />
+              <div class="min-w-0">
+                <div
+                  class="text-white text-xs font-semibold leading-snug group-hover:text-red-400 transition-colors line-clamp-2">
+                  The Mediterranean Diet & Heart Health: What the Science Says</div>
+                <div class="text-slate-400 text-xs mt-1 flex items-center gap-1.5">
+                  <i data-lucide="calendar" class="w-3 h-3"></i> April 10, 2026
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM BAR -->
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-5">
+        <!-- Copyright -->
+        <div class="text-center lg:text-left">
+          <p class="text-slate-400 text-sm">© 2026 <span class="text-slate-300 font-semibold">CardioCare</span>. All
+            rights reserved by <span class="text-slate-300 font-semibold"><a href="https://www.templatemonster.com/authors/k29solutions/" target="_blank">K29Solutions</a></span>. Designed for healthcare professionals &bull; Distributed by <span class="text-slate-300 font-semibold"><a href="https://www.themewagon.com/" target="_blank">ThemeWagon</a></span>.</p>
+          <p class="text-slate-400 text-xs mt-1">This website is for informational purposes only and does not constitute
+            medical advice.</p>
+        </div>
+
+        <!-- Legal Links -->
+        <div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+          <a href="privacy.html" class="text-slate-400 text-xs hover:text-red-400 transition-colors">Privacy Policy</a>
+          <a href="terms.html" class="text-slate-400 text-xs hover:text-red-400 transition-colors">Terms of Service</a>
+          <a href="faq.html" class="text-slate-400 text-xs hover:text-red-400 transition-colors">FAQs</a>
+          <a href="#" class="text-slate-400 text-xs hover:text-red-400 transition-colors">Accessibility</a>
+          <a href="#" class="text-slate-400 text-xs hover:text-red-400 transition-colors">Cookie Policy</a>
+          <a href="#" class="text-slate-400 text-xs hover:text-red-400 transition-colors">Sitemap</a>
+        </div>
+
+        <!-- Payment Accepted -->
+        <div class="flex items-center gap-2">
+          <span class="text-slate-400 text-xs">Insurance:</span>
+          <div class="flex gap-1.5">
+            <span class="bg-white/8 border border-white/10 text-slate-400 text-xs px-2 py-1 rounded-md">Medicare</span>
+            <span class="bg-white/8 border border-white/10 text-slate-400 text-xs px-2 py-1 rounded-md">Aetna</span>
+            <span class="bg-white/8 border border-white/10 text-slate-400 text-xs px-2 py-1 rounded-md">BCBS</span>
+            <span class="bg-white/8 border border-white/10 text-slate-400 text-xs px-2 py-1 rounded-md">+more</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY CTA -->
+  <div class="mobile-cta dark:bg-slate-900 dark:border-t dark:border-slate-700">
+    <a href="#appointment" class="btn-primary w-full justify-center py-3.5 text-base">
+      <i data-lucide="calendar-plus" class="w-5 h-5"></i>
+      Book BP Consultation
+    </a>
+  </div>
+
+  <!-- SCROLL TOP -->
+  <button id="scroll-top" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z" fill="white" stroke="none"/>
+    </svg>
+  </button>
+
+  <!-- TOAST -->
+  <div id="toast" class="fixed top-20 right-4 bg-green-600 text-white px-5 py-3 rounded-lg shadow-lg font-medium text-sm translate-x-full opacity-0 transition-all duration-300 z-[200] flex items-center gap-2">
+    <i data-lucide="check-circle" class="w-5 h-5"></i>
+    <span id="toast-msg">BP consultation request submitted!</span>
+  </div>
+
+  <script src="assets/script.js"></script>
+
+</body>
+
+</html>
